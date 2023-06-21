@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.practise.IntroWithSpringCore.Student" name="student1" p:studentId="101" p:studentName="Himanshu Raj" init-method="init" destroy-method="destroy">
+		<property name="faculty">
+			<ref bean="fac1"/>
+		</property>
+	</bean>
+	<bean id ="fac1" class="com.practise.IntroWithSpringCore.Faculty" name="faculty1" p:fecName="Rinky Tyagi" p:fecCollege="RKGIT">
+	
+	</bean>
+	
+	<bean id="pepsi1" class="com.practise.IntroWithSpringCore.Pepsi" name="pepsiObj" p:price="10"> 
+	</bean>
+	
+	<bean id="cldg1" class="com.practise.IntroWithSpringCore.College" name="collegeObj" p:collegeCode="033" p:collegeName="RKGIT">
+	</bean>
+		
+
+</beans>
